@@ -1,5 +1,4 @@
 const admin = require("./firebase");
-const data = require("./data.json");
 
 async function sendNotificationToDevice(deviceToken, title, body) {
   const message = {
@@ -20,9 +19,13 @@ async function sendNotificationToDevice(deviceToken, title, body) {
 }
 
 // Example usage
-const deviceToken = "YOUR_DEVICE_FCM_TOKEN_HERE";
-sendNotificationToDevice(
-  data.token,
-  "Code Caty",
-  "This is a test notification."
-);
+// const deviceToken = "YOUR_DEVICE_FCM_TOKEN_HERE";
+// sendNotificationToDevice(
+//   data.token,
+//   "Code Caty",
+//   "This is a test notification."
+// );
+
+module.exports = {
+  sendNotificationToDevice
+}
